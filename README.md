@@ -28,21 +28,28 @@
 
 ## 安裝與執行
 
-### 1. 建立 Anaconda 環境
+### 1. 準備 Python
 
-若尚未建立環境，執行：
+電腦需安裝 Python 3.10 以上，並可使用 Tkinter。
+
+如果已經安裝 Python 或 Anaconda，不需要重複安裝 Python。
+
+### 2. 建立獨立環境（可選）
+
+可以直接使用現有的 Python 環境，跳過這一步。
+
+若希望將本專案的套件與其他專案分開，可使用 Anaconda 建立獨立環境：
 
 ```bash
 conda create -n image-sorter python=3.12
-```
-
-### 2. 啟用環境
-
-```bash
 conda activate image-sorter
 ```
 
+此步驟僅適用於已安裝 Anaconda 或 Miniconda 的使用者。
+
 ### 3. 切換至專案資料夾
+
+開啟終端機，切換到 `main.py` 所在的資料夾。
 
 以下以 PowerShell 為例，請依實際位置修改路徑：
 
@@ -56,13 +63,30 @@ cd C:\Code\python\image_sorter
 python -m pip install -r requirements.txt
 ```
 
+通常只需在第一次使用，或套件需求更新時執行。
+
 ### 5. 啟動程式
 
 ```bash
 python main.py
 ```
 
-之後使用時，只需啟用環境、切換至專案資料夾，再執行 `python main.py`。
+### 之後如何啟動
+
+每次使用時，在專案資料夾內執行：
+
+```bash
+python main.py
+```
+
+若先前使用 Anaconda 建立了獨立環境，請先啟用該環境：
+
+```bash
+conda activate image-sorter
+python main.py
+```
+
+不需要每次重新建立環境或安裝套件。
 
 ## 使用方式
 
